@@ -1,6 +1,6 @@
 from datetime import date , datetime ,timedelta
 import DataGet.BWIBBU as bwi
-import CreateOneBWIBBUTable as bwibbu
+import database.CreateOneBWIBBUTable as bwibbu
 import time
 if __name__ == '__main__':
     today = date.today()
@@ -15,7 +15,7 @@ if __name__ == '__main__':
         mm=single_date.strftime("%m")
         dd=single_date.strftime("%d")
         list = bwi.getdata(yyyy, mm, dd)
-        print(len(list), list)
+        #print(len(list), list)
         bwibbu.create_table()
         bwibbu.create_record(list)
         time.sleep(7)  # 每次爬完之後要停10秒

@@ -15,7 +15,7 @@ def create_table():
                 ts date 
               ) 
         '''
-    conn = sqlite3.connect("tw_stock.db")
+    conn = sqlite3.connect("財經資料庫.db")
     cursor = conn.cursor()
     cursor.execute(sql)
     conn.commit()
@@ -23,12 +23,13 @@ def create_table():
 
 def create_record(list):
     sql = "insert into BWIBBU(symbol,name,yield,pe,pb,ts) values(?,?,?,?,?,?)"
-    conn = sqlite3.connect("tw_stock.db")
+    conn = sqlite3.connect("財經資料庫.db")
     cursor = conn.cursor()
     cursor.executemany(sql,list)
     conn.commit()
     conn.close()
     print('OK')
+    '''
 if __name__ == '__main__':
     list = bwi.getdata(2021,11,3)
 
@@ -36,3 +37,4 @@ if __name__ == '__main__':
     create_table()
     create_record(list)
     time.sleep(10)  # 每次爬完之後要停10秒
+    '''

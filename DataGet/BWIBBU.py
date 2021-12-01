@@ -22,7 +22,8 @@ def getdata(yyyy,mm,dd):
          list.append(row)
  return list
 
-
+'''
 if __name__ == '__main__':
     list = getdata(2021,11,3)
     print(len(list),list)
+'''
