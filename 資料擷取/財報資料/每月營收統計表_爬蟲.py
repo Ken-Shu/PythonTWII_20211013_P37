@@ -15,9 +15,9 @@ def get_monthly_report(year,month):
     # 要安裝 lxml 套件 for import StringIO
     dfs = pd.read_html(StringIO(r.text))
 
-    # 顯示所有欄
-    pd.set_option('display.max_columns', None)
     # 顯示所有列
+    pd.set_option('display.max_columns', None)
+    # 顯示所有欄
     pd.set_option('display.max_rows', None)
     # 設定欄寬
     pd.set_option('display.width', 5000)

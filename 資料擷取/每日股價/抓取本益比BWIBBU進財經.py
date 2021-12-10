@@ -4,7 +4,7 @@ import database.CreateOneBWIBBUTable as bwibbu
 import time
 if __name__ == '__main__':
     today = date.today()
-    begin_day = date(2011, 1, 1)
+    begin_day = date(2021, 11, 30)
     print(today, begin_day)
     diff = today-begin_day
     print('diff:', diff)
