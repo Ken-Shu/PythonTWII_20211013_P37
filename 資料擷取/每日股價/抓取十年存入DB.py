@@ -3,7 +3,7 @@ from datetime import date ,datetime , timedelta
 import DataGet.抓取每日股價3_寫入工具 as writeutil
 
 
-begin_day = date(2021,11,30)
+begin_day = date(2021,12,11)
 today = date.today()
 print(begin_day , today)
 diff = today - begin_day
